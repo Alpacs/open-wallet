@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 50px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="511.57" cy="514.25" r="237"/>
+  <g>
+    <rect x="521.63" y="232.7" width="50" height="627.91" rx="10.21" ry="10.21" transform="translate(546.65 -226.41) rotate(45)"/>
+    <rect x="452.49" y="164.65" width="50" height="627.91" rx="10.21" ry="10.21" transform="translate(478.28 -197.46) rotate(45)"/>
+  </g>
+</svg>
