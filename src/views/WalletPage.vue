@@ -5,7 +5,7 @@
                 <h1>OpenWallet</h1>
                 <p @click="copyId()">{{ shortenedText() }}</p>
             </div>
-            <img @click="setIdUser('')" src="static/exit.svg">
+            <img src="static/exit.svg">
         </div>
         <div class="balance-block">
             <h1>{{ getBalance['OPEN'].balance }}</h1>
@@ -140,8 +140,7 @@ import { mapGetters, mapActions } from 'vuex'
         },
         methods: {
             ...mapActions([
-                'updateBalance',
-                'setIdUser'
+                'updateBalance'
             ]),
             copyId() {
                 navigator.clipboard.writeText(this.getId)
@@ -562,7 +561,7 @@ $base-font: 'Inter', sans-serif;
             width: 0;
         }
     }
-    @media (min-width: 377px) and (max-width: 414px) {
+    @media (min-width: 376px) and (max-width: 414px) {
         .wrapper-the-wallet {
             .the-header {
                 .adress-block {
@@ -740,31 +739,28 @@ $base-font: 'Inter', sans-serif;
             }
         }
     } //480 px
-    @media (min-width: 321px) and (max-width: 376px) {
+    @media (min-width: 321px) and (max-width: 375px) {
         .wrapper-the-wallet {
             .the-header {
                 .adress-block {
-                    margin-top: 10px;
                     h1 {
                         margin-top: 8px;
-                        font-size: 25px;
+                        font-size: 30px;
                     }
                     p {
-                        margin-bottom: 30px;
-                        font-size: 15px;
+                        margin-bottom: 40px;
+                        font-size: 20px;
                     }
                 }
                 img {
-                    width: 50px;
-                    height: 50px;
                     top: 16px;
                     right: 22px;
                 }
             }
             .balance-block {
                 h1 {
-                    font-size: 45px;
-                    line-height: 95px;
+                    font-size: 60px;
+                    line-height: 105px;
                 }
                 p {
                     margin-bottom: 27px;
@@ -775,7 +771,7 @@ $base-font: 'Inter', sans-serif;
                         height: 37px;
                         padding: 5px 14px 7px 12px;
 
-                        font-size: 18px;
+                        font-size: 20px;
                         img {
                             margin-right: 12px;
                         }
@@ -871,15 +867,15 @@ $base-font: 'Inter', sans-serif;
                     }
                     div {
                         h1 {
-                            font-size: 16px;
+                            font-size: 20px;
                         }
                         p {
-                            font-size: 14px;
+                            font-size: 15px;
                         }
                     }
                 }
                 p {
-                    font-size: 14px;
+                    font-size: 20px;
                 }
             }
             .transactions-block {
@@ -905,15 +901,15 @@ $base-font: 'Inter', sans-serif;
                             }
                             div {
                                 h3 {
-                                    font-size: 16px;
+                                    font-size: 20px;
                                 }
                                 p {
-                                    font-size: 14px;
+                                    font-size: 15px;
                                 }
                             }
                         }
                         p {
-                            font-size: 14px;
+                            font-size: 20px;
                         }
                     }
                 }
@@ -924,27 +920,24 @@ $base-font: 'Inter', sans-serif;
         .wrapper-the-wallet {
             .the-header {
                 .adress-block {
-                    margin-top: 10px;
                     h1 {
                         margin-top: 8px;
-                        font-size: 21px;
+                        font-size: 30px;
                     }
                     p {
                         margin-bottom: 40px;
-                        font-size: 15px;
+                        font-size: 20px;
                     }
                 }
                 img {
-                    width: 40px;
-                    height: 40px;
                     top: 16px;
                     right: 22px;
                 }
             }
             .balance-block {
                 h1 {
-                    font-size: 40px;
-                    line-height: 85px;
+                    font-size: 60px;
+                    line-height: 105px;
                 }
                 p {
                     margin-bottom: 27px;
@@ -955,7 +948,7 @@ $base-font: 'Inter', sans-serif;
                         height: 37px;
                         padding: 5px 14px 7px 12px;
 
-                        font-size: 15px;
+                        font-size: 20px;
                         img {
                             margin-right: 12px;
                         }
@@ -1046,29 +1039,31 @@ $base-font: 'Inter', sans-serif;
                 margin-top: 40px;
                 .ton-balanse-block {
                     img {
-                        width: 35px;
+                        width: 50px;
                         margin-right: 15px;
                     }
                     div {
                         h1 {
-                            font-size: 15px;
+                            font-size: 20px;
                         }
                         p {
-                            font-size: 12px;
+                            font-size: 15px;
                         }
                     }
                 }
                 p {
-                    font-size: 15px;
+                    font-size: 20px;
                 }
             }
             .transactions-block {
                 margin: 37px auto 0;
                 h2 {
-                    font-size: 14px;
+                    font-size: 20px;
                     margin-bottom: 11px;
                 }
                 .wrapper-transaction {
+                    // max-height: 40dvh;
+                    // overflow: scroll;
                     width: 100%;
                     .transaction {
                         padding: 0 22px 0 14px;
@@ -1077,21 +1072,21 @@ $base-font: 'Inter', sans-serif;
                         width: 100%;
                         div {
                             img {
-                                width: 35px;
-                                height: 35px;
+                                width: 50px;
+                                height: 50px;
                                 margin-right: 15px;
                             }
                             div {
                                 h3 {
-                                    font-size: 15px;
+                                    font-size: 20px;
                                 }
                                 p {
-                                    font-size: 12px;
+                                    font-size: 15px;
                                 }
                             }
                         }
                         p {
-                            font-size: 12px;
+                            font-size: 20px;
                         }
                     }
                 }

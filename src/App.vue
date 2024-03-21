@@ -1,9 +1,17 @@
 <template>
-  
+  <!--Обёртка для основной страницы.-->
   <div class="wrapper-main-page">
+
+    <!--Основной блок страницы-->
     <div class="main-page-block">
+
+      <!--Страница регистрации-->
       <RegisterBlock v-if="!getId"/>
+
+      <!--Отображаемый компонент-->
       <router-view/>
+
+      <!--Навигационное меню-->
       <div class="wrapper-nav">
         <nav>
           <router-link to="/"><img src="static/wallet-logo.svg"></router-link>
@@ -13,6 +21,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -27,6 +36,7 @@ import { mapGetters, mapActions } from 'vuex';
     },
 
     computed: {
+      // импорт 
       ...mapGetters(['getId'])
     },
     data() {
@@ -40,54 +50,58 @@ import { mapGetters, mapActions } from 'vuex';
         'updateBalance',
         'addIdUser'
       ]),
-      // getCookie(name) {
-      //   let matches = document.cookie.match(new RegExp(
-      //       "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-      //   ));
-      //   console.log(matches ? decodeURIComponent(matches[1]) : undefined)
-      //   return matches ? decodeURIComponent(matches[1]) : undefined;
-      // },
-      // setCookie(name, value, options = {}) {
-      //   options = {
-      //     path: '/',
-      //     ...options
-      //   };
+        // getCookie(name) {
+        //   let matches = document.cookie.match(new RegExp(
+        //       "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        //   ));
+        //   console.log(matches ? decodeURIComponent(matches[1]) : undefined)
+        //   return matches ? decodeURIComponent(matches[1]) : undefined;
+        // },
+        // setCookie(name, value, options = {}) {
+        //   options = {
+        //     path: '/',
+        //     ...options
+        //   };
 
-      //   if (options.expires instanceof Date) {
-      //     options.expires = options.expires.toUTCString();
-      //   }
+        //   if (options.expires instanceof Date) {
+        //     options.expires = options.expires.toUTCString();
+        //   }
 
-      //   let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+        //   let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
 
-      //   for (let optionKey in options) {
-      //     updatedCookie += "; " + optionKey;
-      //     let optionValue = options[optionKey];
-      //     if (optionValue !== true) {
-      //         updatedCookie += "=" + optionValue;
-      //     }
-      //   }
-      //   document.cookie = updatedCookie;
-      // },
-      // deleteCookie(name) {
-      //     this.setCookie(name, "", {
-      //         'max-age': -1
-      //     })
-      // },
-      // async authUser() {
-      //   const token = await axios.post('http://localhost:8080/UR/auth', {
-      //     method: 'POST',
-      //     headers: {
-      //         'Content-Type': 'application/json;charset=utf-8'
-      //     },
-      //     body: JSON.stringify(loginData)
-      //   })
-      //   .then(result => {
-      //     return result.json();
-      //   });
+        //   for (let optionKey in options) {
+        //     updatedCookie += "; " + optionKey;
+        //     let optionValue = options[optionKey];
+        //     if (optionValue !== true) {
+        //         updatedCookie += "=" + optionValue;
+        //     }
+        //   }
+        //   document.cookie = updatedCookie;
+        // },
+        // deleteCookie(name) {
+        //     this.setCookie(name, "", {
+        //         'max-age': -1
+        //     })
+        // },
+        // async authUser() {
+        //   try {
+        //     const token = await axios.post('http://localhost:8080/UR/auth', {
+        //       method: 'POST',
+        //       headers: {
+        //           'Content-Type': 'application/json;charset=utf-8'
+        //       },
+        //       body: JSON.stringify(loginData)
+        //     })
+        //     .then(result => {
+        //       return result.json();
+        //     });
+        //   } catch(err) {
+        //     console.log(err)
+        //   }
 
-      //   this.setCookie('token', token, {'max-age': 3600})
-      //   console.log(document.cookie)
-      // },
+        //   this.setCookie('token', token, {'max-age': 3600})
+        //   console.log(document.cookie)
+        // },
     },
     mounted() {
       setInterval(() => {

@@ -87,17 +87,12 @@ import {mapActions} from 'vuex'
 
 <style scoped lang="scss">
 $base-font: 'Inter', sans-serif;
-* {
-    box-sizing: border-box;
-}
     .register-block {
         display: flex;
         align-items: center;
         flex-direction: column;
         width: 100%;
         height: 100dvh;
-        left: 0;
-        top: 0;
         z-index: 1;
         position: absolute;
         background: #161616;
@@ -115,7 +110,7 @@ $base-font: 'Inter', sans-serif;
             line-height: normal;
             color: #FFF;
             text-align: center;
-            margin-bottom: 15dvh;
+            margin-bottom: 162px;
         }
         .register-button {
             cursor: pointer;
@@ -137,9 +132,10 @@ $base-font: 'Inter', sans-serif;
         }
         .auth-button {
             cursor: pointer;
+            font-family: $base-font;
             color: #FFF;
             text-align: center;
-            font-family: $base-font;
+            font-family: Inter;
             font-size: 20px;
             font-style: normal;
             font-weight: 300;
@@ -162,7 +158,7 @@ $base-font: 'Inter', sans-serif;
                     margin: 31px 0 26px;
                     color: #FFF;
                     text-align: center;
-                    font-family: $base-font;
+                    font-family: Inter;
                     font-size: 40px;
                     font-style: normal;
                     font-weight: 700;
@@ -234,7 +230,7 @@ $base-font: 'Inter', sans-serif;
                     margin: 31px 0 26px;
                     color: #FFF;
                     text-align: center;
-                    font-family: $base-font;
+                    font-family: Inter;
                     font-size: 40px;
                     font-style: normal;
                     font-weight: 700;
@@ -295,276 +291,6 @@ $base-font: 'Inter', sans-serif;
         }
         .wrapper-auth-block::-webkit-scrollbar {
             width: 0;
-        }
-    }
-    @media (min-width: 377px) and (max-width: 414px) {
-        .register-block {
-            img {
-                margin: 62px 0 31px;
-                width: 216px;
-                height: 216px;
-            }
-            h1 {
-                max-width: 70%;
-                font-size: 30px;
-                margin-bottom: 162px;
-            }
-            .register-button {
-                max-width: 65%;
-                height: 79px;
-                border-radius: 19px;
-                font-size: 40px;
-                margin-bottom: 39px;
-            }
-            .auth-button {
-                font-size: 17px;
-            }
-            .wrapper-register-block {
-                .register-popap-block {                    
-                    h1 {
-                        max-width: 80%;
-                        margin: 31px 0 36px;
-                        font-size: 35px;
-                    }
-                    .word-block {
-                        margin-bottom: 26px;
-                        width: 70%;
-                        height: 52px;
-                        border-radius: 20px;
-                        span {
-                            font-size: 20px;
-                            margin-left: 19px;
-                            margin-right: 19px;
-                        }
-                        p {
-                            font-size: 20px;
-                        }
-                    }
-                    a {
-                        border-radius: 19px;
-                        background: #D9D9D9;
-                        margin-top: 30px;
-                        margin-bottom: 26px;
-                        padding: 15px;
-                        
-                        font-size: 30px;
-                    }
-                }
-            }
-            .wrapper-auth-block {
-                .auth-popap-block {
-                    h1 {
-                        max-width: 80%;
-                        margin: 31px 0 36px;
-                        font-size: 35px;
-                    }
-                    .word-block {
-                        margin-bottom: 26px;
-                        width: 70%;
-                        height: 52px;
-                        border-radius: 20px;
-                        span {
-                            font-size: 20px;
-                            margin-left: 19px;
-                            margin-right: 19px;
-                        }
-                        input {
-                            width: 80%;
-                            border: 0;
-                            background: #222;
-
-                            font-size: 20px;
-                        }
-                    }
-                    a {
-                        margin-top: 30px;
-                        margin-bottom: 26px;
-                        padding: 15px;
-                        
-                        font-size: 30px;
-                    }
-                }
-            }
-        }
-    }
-    @media (min-width: 321px) and (max-width: 376px) {
-        .register-block {
-            img {
-                margin: 62px 0 31px;
-                width: 180px;
-                height: 180px;
-            }
-            h1 {
-                max-width: 70%;
-                font-size: 25px;
-                margin-bottom: 162px;
-            }
-            .register-button {
-                max-width: 70%;
-                height: 50px;
-                border-radius: 19px;
-                font-size: 25px;
-                margin-bottom: 39px;
-            }
-            .auth-button {
-                font-size: 17px;
-            }
-            .wrapper-register-block {
-                .register-popap-block {                    
-                    h1 {
-                        max-width: 80%;
-                        margin: 31px 0 26px;
-                        font-size: 30px;
-                    }
-                    .word-block {
-                        margin-bottom: 26px;
-                        width: 70%;
-                        height: 52px;
-                        border-radius: 20px;
-                        span {
-                            font-size: 20px;
-                            margin-left: 19px;
-                            margin-right: 19px;
-                        }
-                        p {
-                            font-size: 20px;
-                        }
-                    }
-                    a {
-                        border-radius: 19px;
-                        background: #D9D9D9;
-                        margin-top: 30px;
-                        margin-bottom: 26px;
-                        padding: 15px;
-                        font-size: 25px;
-                    }
-                }
-            }
-            .wrapper-auth-block {
-                .auth-popap-block {
-                    h1 {
-                        max-width: 80%;
-                        margin: 31px 0 26px;
-                        font-size: 40px;
-                    }
-                    .word-block {
-                        margin-bottom: 26px;
-                        width: 75%;
-                        height: 52px;
-                        border-radius: 20px;
-                        span {
-                            font-size: 20px;
-                            margin-left: 19px;
-                            margin-right: 19px;
-                        }
-                        input {
-                            width: 80%;
-                            border: 0;
-                            background: #222;
-
-                            font-size: 20px;
-                        }
-                    }
-                    a {
-                        margin-top: 30px;
-                        margin-bottom: 26px;
-                        padding: 15px;
-                        
-                        font-size: 25px;
-                    }
-                }
-            }
-        }
-    }
-    @media (max-width: 320px) {
-        .register-block {
-            img {
-                margin: 62px 0 31px;
-                width: 150px;
-                height: 150px;
-            }
-            h1 {
-                max-width: 80%;
-                font-size: 29px;
-                margin-bottom: 162px;
-            }
-            .register-button {
-                max-width: 80%;
-                height: 55px;
-                border-radius: 19px;
-                font-size: 25px;
-                margin-bottom: 39px;
-            }
-            .auth-button {
-                max-width: 80%;
-                font-size: 18px;
-            }
-            .wrapper-register-block {
-                .register-popap-block {                    
-                    h1 {
-                        max-width: 80%;
-                        margin: 31px 0 26px;
-                        font-size: 25px;
-                    }
-                    .word-block {
-                        margin-bottom: 26px;
-                        width: 80%;
-                        height: 52px;
-                        border-radius: 20px;
-                        span {
-                            font-size: 20px;
-                            margin-left: 19px;
-                            margin-right: 19px;
-                        }
-                        p {
-                            font-size: 20px;
-                        }
-                    }
-                    a {
-                        border-radius: 19px;
-                        background: #D9D9D9;
-                        margin-top: 30px;
-                        margin-bottom: 26px;
-                        padding: 15px;
-                        
-                        font-size: 20px;
-                    }
-                }
-            }
-            .wrapper-auth-block {
-                .auth-popap-block {
-                    h1 {
-                        max-width: 80%;
-                        margin: 31px 0 26px;
-                        font-size: 40px;
-                    }
-                    .word-block {
-                        margin-bottom: 26px;
-                        max-width: 70%;
-                        height: 52px;
-                        border-radius: 20px;
-                        span {
-                            font-size: 20px;
-                            margin-left: 19px;
-                            margin-right: 19px;
-                        }
-                        input {
-                            width: 80%;
-                            border: 0;
-                            background: #222;
-
-                            font-size: 20px;
-                        }
-                    }
-                    a {
-                        margin-top: 30px;
-                        margin-bottom: 26px;
-                        padding: 15px;
-                        
-                        font-size: 23px;
-                    }
-                }
-            }
         }
     }
 </style>
